@@ -14,7 +14,8 @@ namespace Radio
         {
             try
             {
-                StreamReader reader = File.OpenText("C:/Users/Facu/Desktop/facu/radio/radios/radiosNacionales.txt");
+                var homePath = Environment.GetEnvironmentVariable("HOMEPATH");
+                StreamReader reader = File.OpenText(homePath+"/radiosNacionales.txt");
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
